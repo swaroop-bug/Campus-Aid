@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: campusaid-backend
+    env: node
+    plan: free
+    rootDir: campbackend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: FIREBASE_PROJECT_ID
+        sync: false
+      - key: FIREBASE_PRIVATE_KEY
+        sync: false
+      - key: FIREBASE_CLIENT_EMAIL
+        sync: false
+      - key: GOOGLE_GENERATIVE_AI_KEY
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: APP_URL
+        value: https://campusaid-somaiya.web.app

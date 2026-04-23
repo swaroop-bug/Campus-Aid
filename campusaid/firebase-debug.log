@@ -1,0 +1,59 @@
+[debug] [2026-04-23T04:16:31.638Z] ----------------------------------------------------------------------
+[debug] [2026-04-23T04:16:31.643Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\swaro\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js projects:list --non-interactive
+[debug] [2026-04-23T04:16:31.643Z] CLI Version:   15.11.0
+[debug] [2026-04-23T04:16:31.644Z] Platform:      win32
+[debug] [2026-04-23T04:16:31.644Z] Node Version:  v25.8.1
+[debug] [2026-04-23T04:16:31.644Z] Time:          Thu Apr 23 2026 09:46:31 GMT+0530 (India Standard Time)
+[debug] [2026-04-23T04:16:31.644Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-04-23T04:16:31.972Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-04-23T04:16:31.972Z] > authorizing via signed-in user (csi@ternaengg.ac.in)
+[debug] [2026-04-23T04:16:31.978Z] Checked if tokens are valid: true, expires at: 1776921370883
+[debug] [2026-04-23T04:16:31.978Z] Checked if tokens are valid: true, expires at: 1776921370883
+[debug] [2026-04-23T04:16:31.980Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2026-04-23T04:16:32.789Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2026-04-23T04:16:32.789Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] ┌──────────────────────┬────────────┬────────────────┬──────────────────────┐
+│ Project Display Name │ Project ID │ Project Number │ Resource Location ID │
+├──────────────────────┼────────────┼────────────────┼──────────────────────┤
+│ csi-web              │ csi-terna  │ 78596572746    │ [Not specified]      │
+└──────────────────────┴────────────┴────────────────┴──────────────────────┘
+[info] 
+[info] 1 project(s) total.
+[debug] [2026-04-23T04:16:38.240Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\swaro\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:308:49)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2026-04-23T04:19:09.992Z] ----------------------------------------------------------------------
+[debug] [2026-04-23T04:19:09.997Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\swaro\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting --non-interactive
+[debug] [2026-04-23T04:19:09.998Z] CLI Version:   15.11.0
+[debug] [2026-04-23T04:19:09.998Z] Platform:      win32
+[debug] [2026-04-23T04:19:09.998Z] Node Version:  v25.8.1
+[debug] [2026-04-23T04:19:09.998Z] Time:          Thu Apr 23 2026 09:49:09 GMT+0530 (India Standard Time)
+[debug] [2026-04-23T04:19:09.999Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-04-23T04:19:16.630Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-04-23T04:19:16.631Z] > authorizing via signed-in user (csi@ternaengg.ac.in)
+[debug] [2026-04-23T04:19:16.631Z] [iam] checking project campusaid-somaiya for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-04-23T04:19:16.634Z] Checked if tokens are valid: true, expires at: 1776921370883
+[debug] [2026-04-23T04:19:16.634Z] Checked if tokens are valid: true, expires at: 1776921370883
+[debug] [2026-04-23T04:19:16.636Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/campusaid-somaiya:testIamPermissions [none]
+[debug] [2026-04-23T04:19:16.636Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/campusaid-somaiya:testIamPermissions  x-goog-user-project=campusaid-somaiya
+[debug] [2026-04-23T04:19:16.636Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/campusaid-somaiya:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-04-23T04:19:18.437Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/campusaid-somaiya:testIamPermissions 403
+[debug] [2026-04-23T04:19:18.437Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/campusaid-somaiya:testIamPermissions {"error":{"code":403,"message":"Caller does not have required permission to use project campusaid-somaiya. Grant the caller the roles/serviceusage.serviceUsageConsumer role, or a custom role with the serviceusage.services.use permission, by visiting https://console.developers.google.com/iam-admin/iam?project=campusaid-somaiya and then retry. Propagation of the new permission may take a few minutes.","status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"USER_PROJECT_DENIED","domain":"googleapis.com","metadata":{"service":"cloudresourcemanager.googleapis.com","consoleUrl":"https://console.developers.google.com/iam-admin/iam?project=campusaid-somaiya","containerInfo":"campusaid-somaiya","consumer":"projects/campusaid-somaiya"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Caller does not have required permission to use project campusaid-somaiya. Grant the caller the roles/serviceusage.serviceUsageConsumer role, or a custom role with the serviceusage.services.use permission, by visiting https://console.developers.google.com/iam-admin/iam?project=campusaid-somaiya and then retry. Propagation of the new permission may take a few minutes."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developer console IAM admin","url":"https://console.developers.google.com/iam-admin/iam?project=campusaid-somaiya"}]}]}}
+[debug] [2026-04-23T04:19:18.439Z] [iam] error while checking permissions, command may fail: Request to https://cloudresourcemanager.googleapis.com/v1/projects/campusaid-somaiya:testIamPermissions had HTTP Error: 403, Caller does not have required permission to use project campusaid-somaiya. Grant the caller the roles/serviceusage.serviceUsageConsumer role, or a custom role with the serviceusage.services.use permission, by visiting https://console.developers.google.com/iam-admin/iam?project=campusaid-somaiya and then retry. Propagation of the new permission may take a few minutes.
+[debug] [2026-04-23T04:19:18.441Z] Checked if tokens are valid: true, expires at: 1776921370883
+[debug] [2026-04-23T04:19:18.441Z] Checked if tokens are valid: true, expires at: 1776921370883
+[debug] [2026-04-23T04:19:18.441Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/campusaid-somaiya [none]
+[debug] [2026-04-23T04:19:19.113Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/campusaid-somaiya 403
+[debug] [2026-04-23T04:19:19.113Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/campusaid-somaiya {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2026-04-23T04:19:19.114Z] Request to https://firebase.googleapis.com/v1beta1/projects/campusaid-somaiya had HTTP Error: 403, The caller does not have permission
+[debug] [2026-04-23T04:19:19.407Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/campusaid-somaiya had HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\swaro\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:53:12)
+    at RetryOperation._fn (C:\Users\swaro\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:333:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+[error] 
+[error] Error: Failed to get Firebase project campusaid-somaiya. Please make sure the project exists and your account has permission to access it.
