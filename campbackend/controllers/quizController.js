@@ -1,8 +1,8 @@
 const { getDb } = require('../config/firebase');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 
-// Initialize Gemini (expects GEMINI_API_KEY in env)
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+// Initialize Gemini (expects GEMINI_API_KEY or GOOGLE_GENERATIVE_AI_KEY in env)
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || process.env.GOOGLE_GENERATIVE_AI_KEY);
 
 // ─── Department → Semester → Subjects mapping ───
 

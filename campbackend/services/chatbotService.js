@@ -100,7 +100,7 @@ async function sendMessage(message) {
   }
 
   // Fallback to Gemini
-  const geminiKey = process.env.GEMINI_API_KEY;
+  const geminiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_GENERATIVE_AI_KEY;
   if (geminiKey && geminiKey !== 'FILL_THIS') {
     try {
       console.log('🤖 Falling back to Gemini...');
